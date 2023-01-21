@@ -7,8 +7,9 @@ if __name__ == "__main__":
     pdfdir = "pdf"
 
     it = DirIterator(rootdir, mddir, pdfdir)
-    list = it.get_to_convert()
-    print(list)
+    to_convert = it.get_to_convert()
+    all_files = it.get_all_files()
 
-    conv = PdfConverter(list)
-    conv.convert()
+    conv = PdfConverter()
+    conv.convert(to_convert)
+    conv.create_table_of_contents_pdf(all_files)
