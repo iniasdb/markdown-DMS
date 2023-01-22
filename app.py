@@ -1,4 +1,5 @@
 from DirIterator import DirIterator
+from GithubHelper import GithubHelper
 from PdfConverter import PdfConverter
 
 if __name__ == "__main__":
@@ -13,3 +14,7 @@ if __name__ == "__main__":
     conv = PdfConverter()
     conv.convert(to_convert)
     conv.create_table_of_contents_pdf(all_files)
+
+    gh = GithubHelper("https://github.com/iniasdb/DMS")
+    gh.commit_changes()
+    

@@ -4,8 +4,6 @@ from rinoh.templates import Article
 from rinoh.document import DocumentTree
 from rinoh.styleds import *
 
-from mdutils.mdutils import MdUtils
-
 import os.path as path
 from pathlib import Path as pathlib
 
