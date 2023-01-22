@@ -38,7 +38,6 @@ if __name__ == "__main__":
     os.system("git init") # No harm in initializing multiple times
     os.system("git add .")
     date = str(datetime.date.today())
-    print(date)
     os.system(f"git commit -m {date}")
-    # message = os.popen("git ls-remote --exit-code").read()
-    # print(message)
+    message = os.popen("git ls-remote --exit-code").read()
+    print(message)
