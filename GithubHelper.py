@@ -1,6 +1,5 @@
 from git import Repo
 import os
-import subprocess
 import datetime
 
 class GithubHelper:
